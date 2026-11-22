@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mission-control"
+version = "0.1.0"
+description = "MissionControl: multi-agent incident response where disagreements are settled by an arbiter that acquires NEW evidence from the environment -- never by voting over the proposals."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+]
+
+[tool.setuptools.packages.find]
+include = ["missioncontrol*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
